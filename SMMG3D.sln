@@ -17,6 +17,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab2 Hello DirectX 9", "Lab
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab2 Hello DirectX 11", "Lab2\Lab2 Hello DirectX 11\Lab2 Hello DirectX 11.vcxproj", "{2D44FD68-85FB-42DB-A454-8337929EA2AC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab3 - Uniform Variables", "Lab3\Lab3 - Uniform Variables\Lab3 - Uniform Variables.vcxproj", "{951C197A-4651-49E2-86D0-B086196B407A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DB29B095-5AE6-4EEA-9793-356559744621} = {DB29B095-5AE6-4EEA-9793-356559744621}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +86,14 @@ Global
 		{2D44FD68-85FB-42DB-A454-8337929EA2AC}.Release|x64.Build.0 = Release|x64
 		{2D44FD68-85FB-42DB-A454-8337929EA2AC}.Release|x86.ActiveCfg = Release|Win32
 		{2D44FD68-85FB-42DB-A454-8337929EA2AC}.Release|x86.Build.0 = Release|Win32
+		{951C197A-4651-49E2-86D0-B086196B407A}.Debug|x64.ActiveCfg = Debug|x64
+		{951C197A-4651-49E2-86D0-B086196B407A}.Debug|x64.Build.0 = Debug|x64
+		{951C197A-4651-49E2-86D0-B086196B407A}.Debug|x86.ActiveCfg = Debug|Win32
+		{951C197A-4651-49E2-86D0-B086196B407A}.Debug|x86.Build.0 = Debug|Win32
+		{951C197A-4651-49E2-86D0-B086196B407A}.Release|x64.ActiveCfg = Release|x64
+		{951C197A-4651-49E2-86D0-B086196B407A}.Release|x64.Build.0 = Release|x64
+		{951C197A-4651-49E2-86D0-B086196B407A}.Release|x86.ActiveCfg = Release|Win32
+		{951C197A-4651-49E2-86D0-B086196B407A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
