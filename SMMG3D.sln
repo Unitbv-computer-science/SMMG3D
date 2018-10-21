@@ -22,6 +22,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab3 - Uniform Variables", 
 		{DB29B095-5AE6-4EEA-9793-356559744621} = {DB29B095-5AE6-4EEA-9793-356559744621}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab4 - Index buffer", "Lab4 - Index buffer\Lab4 - Index buffer.vcxproj", "{A328E3B2-D7EF-469A-B784-8AD629BE7878}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -94,6 +96,14 @@ Global
 		{951C197A-4651-49E2-86D0-B086196B407A}.Release|x64.Build.0 = Release|x64
 		{951C197A-4651-49E2-86D0-B086196B407A}.Release|x86.ActiveCfg = Release|Win32
 		{951C197A-4651-49E2-86D0-B086196B407A}.Release|x86.Build.0 = Release|Win32
+		{A328E3B2-D7EF-469A-B784-8AD629BE7878}.Debug|x64.ActiveCfg = Debug|x64
+		{A328E3B2-D7EF-469A-B784-8AD629BE7878}.Debug|x64.Build.0 = Debug|x64
+		{A328E3B2-D7EF-469A-B784-8AD629BE7878}.Debug|x86.ActiveCfg = Debug|Win32
+		{A328E3B2-D7EF-469A-B784-8AD629BE7878}.Debug|x86.Build.0 = Debug|Win32
+		{A328E3B2-D7EF-469A-B784-8AD629BE7878}.Release|x64.ActiveCfg = Release|x64
+		{A328E3B2-D7EF-469A-B784-8AD629BE7878}.Release|x64.Build.0 = Release|x64
+		{A328E3B2-D7EF-469A-B784-8AD629BE7878}.Release|x86.ActiveCfg = Release|Win32
+		{A328E3B2-D7EF-469A-B784-8AD629BE7878}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
