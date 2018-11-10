@@ -9,6 +9,7 @@
 Camera::Camera(const float FoVy, const float width, const float height, const float zNear, const float zFar,
                const glm::vec3 &position, const glm::vec3 &worldUp)
 {
+   this->isPerspective = true;
    this->yaw = 90.f;
    this->pitch = 0.f;
    Set(FoVy, width, height, zNear, zFar, position, worldUp);
