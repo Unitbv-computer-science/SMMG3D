@@ -259,3 +259,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/Lab4 - Index buffer - Copy
+/Lab3 UniformVariables Test

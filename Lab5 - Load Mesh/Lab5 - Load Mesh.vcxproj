@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{73515328-31DB-4526-ACBF-0ACB447A65E8}</ProjectGuid>
+    <ProjectGuid>{67B7224F-F20A-4953-8C66-8E320EF3B735}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Lab2HelloGLFW</RootNamespace>
+    <RootNamespace>Lab5LoadMesh</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,40 +70,26 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\_external\GLEW;$(SolutionDir)\_external\GLFW;$(SolutionDir)\_external\FreeGLUT;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\_external\GLEW\$(PlatformTarget);$(SolutionDir)\_external\GLFW\$(PlatformTarget);$(SolutionDir)\_external\FreeGLUT\$(PlatformTarget);$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\_external\GLEW;$(SolutionDir)\_external\GLFW;$(SolutionDir)\_external\FreeGLUT;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\_external\GLEW\$(PlatformTarget);$(SolutionDir)\_external\GLFW\$(PlatformTarget);$(SolutionDir)\_external\FreeGLUT\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\_external\freeglut;$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\_external\freeglut\$(PlatformTarget);$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)\_external\freeglut;$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\_external\freeglut\$(PlatformTarget);$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\_external\GLEW;$(SolutionDir)\_external\GLFW;$(SolutionDir)\_external\FreeGLUT;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\_external\GLEW\$(PlatformTarget);$(SolutionDir)\_external\GLFW\$(PlatformTarget);$(SolutionDir)\_external\FreeGLUT\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\_external\freeglut;$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\_external\freeglut\$(PlatformTarget);$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\_external\GLEW;$(SolutionDir)\_external\GLFW;$(SolutionDir)\_external\FreeGLUT;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\_external\GLEW\$(PlatformTarget);$(SolutionDir)\_external\GLFW\$(PlatformTarget);$(SolutionDir)\_external\FreeGLUT\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\_external\freeglut;$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\_external\freeglut\$(PlatformTarget);$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -111,6 +97,20 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -155,14 +155,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Lab5Engine.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Lab2 - Hello GLFW.cpp" />
+    <ClCompile Include="Lab5 - Load Mesh.cpp" />
+    <ClCompile Include="Lab5Engine.cpp" />
     <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
