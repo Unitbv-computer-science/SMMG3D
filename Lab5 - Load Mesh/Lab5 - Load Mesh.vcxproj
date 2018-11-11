@@ -72,23 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\_external\freeglut;$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\_external\freeglut\$(PlatformTarget);$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\_external\freeglut;$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\_external\freeglut\$(PlatformTarget);$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\_external\freeglut;$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\_external\freeglut\$(PlatformTarget);$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\_external\freeglut;$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\_external\freeglut\$(PlatformTarget);$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
