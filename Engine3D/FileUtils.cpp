@@ -45,3 +45,36 @@ bool FileUtils::ReadBinaryFile(const char* pFileName, std::shared_ptr<char>& spD
 	spData.reset(pData);
 	return true;
 }
+
+std::string FileUtils::getPath(const std::string& path) {
+	std::string result;
+
+	result = path.substr(0, path.find_last_of("/\\") + 1);
+
+	return result;
+}
+
+std::string FileUtils::getFilename(const std::string& path) {
+	std::string result;
+
+	result = path.substr(path.find_last_of("/\\") + 1);
+
+	return result;
+}
+
+std::string FileUtils::getFilenameExtensionless(const std::string& path) {
+	std::string result;
+	std::string fileName = FileUtils::getFilename(path);
+
+	result = fileName.substr(0, fileName.find_last_of("."));
+
+	return result;
+}
+
+std::string FileUtils::getExtension(const std::string& filePath) {
+	std::string result;
+
+	result = filePath.substr(filePath.find_last_of(".") + 1);
+
+	return result;
+}

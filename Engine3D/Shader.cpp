@@ -4,7 +4,23 @@
 #include <GL/glew.h>
 #include <glfw3.h>
 
+Shader::Shader(const char* resourcePath, const char* vertexFileName, const char* fragmentFileName)
+{
+   std::string vertexPath = resourcePath;
+   vertexPath += vertexFileName;
+
+   std::string fragmentPath = resourcePath;
+   fragmentPath += fragmentFileName;
+
+   Init(vertexPath.c_str(), fragmentPath.c_str());
+}
+
 Shader::Shader(const char* vertexPath, const char* fragmentPath)
+{
+   Init(vertexPath, fragmentPath);
+}
+
+void Shader::Init(const char* vertexPath, const char* fragmentPath)
 {
    // 1. retrieve the vertex/fragment source code from filePath
    std::string vertexCode;
@@ -28,12 +44,13 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath)
       // convert stream into string
       vertexCode = vShaderStream.str();
       fragmentCode = fShaderStream.str();
-   } catch (std::ifstream::failure e) {
+   }
+   catch (std::ifstream::failure e) {
       std::cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ" << std::endl;
    }
    const char* vShaderCode = vertexCode.c_str();
    const char * fShaderCode = fragmentCode.c_str();
-   
+
    // 2. compile shaders
    unsigned int vertex, fragment;
    // vertex shader
@@ -56,7 +73,6 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath)
    // 3. delete the shaders as they're linked into our program now and no longer necessery
    glDeleteShader(vertex);
    glDeleteShader(fragment);
-
 }
 
 Shader::~Shader()
@@ -111,6 +127,13 @@ void Shader::SetVec3(const std::string &name, const glm::vec3 &value) const
 void Shader::SetVec3(const std::string &name, float x, float y, float z) const
 {
    glUniform3f(glGetUniformLocation(ID, name.c_str()), x, y, z);
+}
+// ------------------------------------------------------------------------
+void Shader::GetVec3(const std::string &name, glm::vec3 &value) const
+{
+	GLfloat pValue[3];
+	glGetUniformfv(ID, glGetUniformLocation(ID, name.c_str()), pValue);
+	value = glm::vec3(pValue[0], pValue[1], pValue[2]);
 }
 // ------------------------------------------------------------------------
 void Shader::SetVec4(const std::string &name, const glm::vec4 &value) const

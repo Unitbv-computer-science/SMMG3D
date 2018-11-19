@@ -6,15 +6,64 @@
 #include <GL/glew.h>
 #include <glfw3.h>
 
+#include <gtx/normal.hpp>
 
-Mesh::Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures)
+Mesh::Mesh(const size_t nVertices, const GLfloat pVertices[],
+   const size_t nIndices, const unsigned int pIndices[])
 {
-   this->vertices = vertices;
-   this->indices = indices;
-   this->textures = textures;
+   std::vector<Vertex> vertices;
+   vertices.resize(nVertices);
+   for (size_t i = 0; i < nVertices; i++) {
+      vertices[i].Position = glm::vec3(pVertices[i*3 + 0], pVertices[i*3 + 1], pVertices[i*3 + 2]);
+   }
 
-   // now that we have all the required data, set the vertex buffers and its attribute pointers.
-   SetupMesh();
+   std::vector<unsigned int> indices;
+   indices.resize(nIndices);
+   for (size_t i = 0; i < nIndices; i++) {
+      indices[i] = pIndices[i];
+   }
+
+   std::vector<STexture> textures;
+   Init(vertices, indices, textures, true);
+}
+
+
+Mesh::Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, 
+   std::vector<STexture> textures, bool bComputeNormals)
+{
+   Init(vertices, indices, textures, bComputeNormals);
+}
+
+void Mesh::ComputeNormals()
+{
+   if (vertices.size() <= 0 || indices.size() <= 0) {
+      return;
+   }
+
+   glm::vec3 vNormal;
+
+   glm::vec3* pNormals = new glm::vec3[vertices.size()];
+   for (size_t i = 0; i < vertices.size(); i++) {
+      pNormals[i] = glm::vec3(0.0);
+   }
+   
+   for (size_t i = 0; i < indices.size(); i += 3)
+   {
+      // compute triangle normal and normalize
+      vNormal = glm::triangleNormal(vertices[indices[i + 0]].Position, 
+         vertices[indices[i + 1]].Position, vertices[indices[i + 2]].Position);
+
+      // add triangle normal
+      pNormals[indices[i + 0]] = pNormals[indices[i + 0]] + vNormal;
+      pNormals[indices[i + 1]] = pNormals[indices[i + 1]] + vNormal;
+      pNormals[indices[i + 2]] = pNormals[indices[i + 2]] + vNormal;
+   } // i
+
+   for (size_t i = 0; i < vertices.size(); i++) {
+      vertices[i].Normal = glm::normalize(pNormals[i]);
+   }
+
+   SAFE_FREE_ARRAY(pNormals);
 }
 
 
@@ -47,11 +96,27 @@ void Mesh::Draw(const Shader& shader) const
 
    // draw mesh
    glBindVertexArray(VAO);
+   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
    glDrawElements(GL_TRIANGLES, (GLsizei)indices.size(), GL_UNSIGNED_INT, 0);
    glBindVertexArray(0);
 
    // always good practice to set everything back to defaults once configured.
    glActiveTexture(GL_TEXTURE0);
+}
+
+void Mesh::Init(std::vector<Vertex> vertices, std::vector<unsigned int> indices,
+   std::vector<STexture> textures, bool bComputeNormals) 
+{
+   this->vertices = vertices;
+   this->indices = indices;
+   this->textures = textures;
+
+   if (bComputeNormals) {
+      ComputeNormals();
+   }
+
+   // now that we have all the required data, set the vertex buffers and its attribute pointers.
+   SetupMesh();
 }
 
 void Mesh::SetupMesh()

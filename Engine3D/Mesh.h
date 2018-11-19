@@ -1,5 +1,7 @@
 #pragma once
 
+#include <vector>
+
 struct Vertex
 {
    // position
@@ -14,7 +16,7 @@ struct Vertex
    glm::vec3 Bitangent;
 };
 
-struct Texture
+struct STexture
 {
    unsigned int id;
    std::string type;
@@ -28,7 +30,11 @@ class Mesh
 public:
    /*  Functions  */
    // constructor
-   Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures);
+   Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, 
+      std::vector<STexture> textures, bool bComputeNormals);
+
+   Mesh(const size_t nVertices, const GLfloat pVertices[],
+      const size_t nIndices, const unsigned int pIndices[]);
 
    // render the mesh
    void Draw(const Shader& shader) const;
@@ -37,14 +43,19 @@ private:
    unsigned int VBO, EBO;
 
    /*  Functions    */
+   void Init(std::vector<Vertex> vertices, std::vector<unsigned int> indices,
+      std::vector<STexture> textures, bool bComputeNormals);
+
    // initializes all the buffer objects/arrays
    void SetupMesh();
+
+   void ComputeNormals();
 
 private:
    /*  Mesh Data  */
    std::vector<Vertex> vertices;
    std::vector<unsigned int> indices;
-   std::vector<Texture> textures;
+   std::vector<STexture> textures;
    unsigned int VAO;
 };
 

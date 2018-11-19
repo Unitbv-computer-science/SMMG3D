@@ -15,6 +15,10 @@ public:
    const glm::mat4 GetViewMatrix() const;
    const glm::mat4 GetProjectionMatrix() const;
 
+   glm::vec3 GetPosition() const {
+      return position;
+   }
+
    void KeyControl(bool* keys, double deltaTime);
    void MouseControl(float xChange, float yChange);
 

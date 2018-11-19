@@ -5,6 +5,7 @@ class Shader
 public:
    // constructor generates the shader on the fly
    // ------------------------------------------------------------------------
+   Shader(const char* resourcePath, const char* vertexFileName, const char* fragmentFileName);
    Shader(const char* vertexPath, const char* fragmentPath);
 
    ~Shader();
@@ -30,6 +31,7 @@ public:
    void SetVec2(const std::string &name, float x, float y) const;
    void SetVec3(const std::string &name, const glm::vec3 &value) const;
    void SetVec3(const std::string &name, float x, float y, float z) const;
+   void GetVec3(const std::string &name, glm::vec3 &value) const;
    void SetVec4(const std::string &name, const glm::vec4 &value) const;
    void SetVec4(const std::string &name, float x, float y, float z, float w) const;
    void SetMat2(const std::string &name, const glm::mat2 &mat) const;
@@ -37,6 +39,8 @@ public:
    void SetMat4(const std::string &name, const glm::mat4 &mat) const;
 
 private:
+   void Init(const char* vertexPath, const char* fragmentPath);
+
    // utility function for checking shader compilation/linking errors.
    // ------------------------------------------------------------------------
    void CheckCompileErrors(unsigned int shader, std::string type);

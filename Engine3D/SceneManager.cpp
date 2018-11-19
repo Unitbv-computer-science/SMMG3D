@@ -51,7 +51,7 @@ void SceneManager::AddMesh(const char* meshName, std::vector<glm::vec3> position
       vertex.Position = *it;
       vertices.push_back(vertex);
    }
-   meshes[meshName].reset(new Mesh(vertices, indices, std::vector<Texture>()));
+   meshes[meshName].reset(new Mesh(vertices, indices, std::vector<STexture>(), true));
 }
 
 void SceneManager::AddShader(const char* shaderName, const char* vertexPath, const char* fragmentPath)
