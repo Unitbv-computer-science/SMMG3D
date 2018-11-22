@@ -29,7 +29,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab4 - Index buffer", "Lab4
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab3 UniformVariables Test", "Lab3 UniformVariables Test\Lab3 UniformVariables Test.vcxproj", "{4C3A57B5-652F-4D32-8168-436FB3A41B90}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab5 - Load Mesh", "Lab5 - Load Mesh\Lab5 - Load Mesh.vcxproj", "{67B7224F-F20A-4953-8C66-8E320EF3B735}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab5 - Camera movement", "Lab5 - Load Mesh\Lab5 - Load Mesh.vcxproj", "{67B7224F-F20A-4953-8C66-8E320EF3B735}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DB29B095-5AE6-4EEA-9793-356559744621} = {DB29B095-5AE6-4EEA-9793-356559744621}
 	EndProjectSection
@@ -39,6 +39,11 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab6 - Texturi", "Lab6 - Texturi\Lab6 - Texturi.vcxproj", "{2B7854DE-1015-4762-A817-0330616CD1E5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab7 - Iluminare Phong", "Lab7 - Iluminare Phong\Lab7 - Iluminare Phong.vcxproj", "{1AED6045-6CD5-4259-8013-07770F160B64}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DB29B095-5AE6-4EEA-9793-356559744621} = {DB29B095-5AE6-4EEA-9793-356559744621}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab8 - Load Model", "Lab8 - Load Model\Lab8 - Load Model.vcxproj", "{5657B921-2C17-4C74-9609-4130DF104DFA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DB29B095-5AE6-4EEA-9793-356559744621} = {DB29B095-5AE6-4EEA-9793-356559744621}
 	EndProjectSection
@@ -163,6 +168,14 @@ Global
 		{1AED6045-6CD5-4259-8013-07770F160B64}.Release|x64.Build.0 = Release|x64
 		{1AED6045-6CD5-4259-8013-07770F160B64}.Release|x86.ActiveCfg = Release|Win32
 		{1AED6045-6CD5-4259-8013-07770F160B64}.Release|x86.Build.0 = Release|Win32
+		{5657B921-2C17-4C74-9609-4130DF104DFA}.Debug|x64.ActiveCfg = Debug|x64
+		{5657B921-2C17-4C74-9609-4130DF104DFA}.Debug|x64.Build.0 = Debug|x64
+		{5657B921-2C17-4C74-9609-4130DF104DFA}.Debug|x86.ActiveCfg = Debug|Win32
+		{5657B921-2C17-4C74-9609-4130DF104DFA}.Debug|x86.Build.0 = Debug|Win32
+		{5657B921-2C17-4C74-9609-4130DF104DFA}.Release|x64.ActiveCfg = Release|x64
+		{5657B921-2C17-4C74-9609-4130DF104DFA}.Release|x64.Build.0 = Release|x64
+		{5657B921-2C17-4C74-9609-4130DF104DFA}.Release|x86.ActiveCfg = Release|Win32
+		{5657B921-2C17-4C74-9609-4130DF104DFA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

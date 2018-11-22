@@ -96,8 +96,14 @@ void Mesh::Draw(const Shader& shader) const
 
    // draw mesh
    glBindVertexArray(VAO);
+
+   glBindBuffer(GL_ARRAY_BUFFER, VBO);
    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-   glDrawElements(GL_TRIANGLES, (GLsizei)indices.size(), GL_UNSIGNED_INT, 0);
+
+   int indexArraySize;
+   glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &indexArraySize);
+   int nTriangles = indexArraySize / sizeof(unsigned int);
+   glDrawElements(GL_TRIANGLES, nTriangles, GL_UNSIGNED_INT, 0);
    glBindVertexArray(0);
 
    // always good practice to set everything back to defaults once configured.

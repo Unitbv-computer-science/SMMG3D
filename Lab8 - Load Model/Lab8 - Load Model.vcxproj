@@ -20,11 +20,10 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{67B7224F-F20A-4953-8C66-8E320EF3B735}</ProjectGuid>
+    <ProjectGuid>{5657B921-2C17-4C74-9609-4130DF104DFA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Lab5LoadMesh</RootNamespace>
+    <RootNamespace>Lab8LoadModel</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
-    <ProjectName>Lab5 - Camera movement</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -73,22 +72,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(SolutionDir)\_external\stb;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(SolutionDir)\_external\stb;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(SolutionDir)\_external\stb;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\_external\glew;$(SolutionDir)\_external\glm;$(SolutionDir)\Engine3D;$(SolutionDir)\_external\glfw;$(SolutionDir)\_external\stb;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\_external\glew\$(PlatformTarget);$(SolutionDir)\_external\glfw\$(PlatformTarget);$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -160,7 +159,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Lab5 - Load Mesh.cpp" />
+    <ClCompile Include="Lab8 - Load Model.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
