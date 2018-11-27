@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Shaders">
-      <UniqueIdentifier>{fc61c58a-4d4d-4c1d-be79-938641c1aeaa}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -29,22 +26,22 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Lab7 - Iluminare Phong.cpp">
+    <ClCompile Include="Lab7 - Iluminare Phong simpla.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Resources\Shaders\BasicLighting.FS.glsl">
-      <Filter>Source Files\Shaders</Filter>
+    <None Include="PhongLight.fs">
+      <Filter>Source Files</Filter>
     </None>
-    <None Include="..\Resources\Shaders\BasicLighting.VS.glsl">
-      <Filter>Source Files\Shaders</Filter>
+    <None Include="PhongLight.vs">
+      <Filter>Source Files</Filter>
     </None>
-    <None Include="..\Resources\Shaders\Lamp.FS.glsl">
-      <Filter>Source Files\Shaders</Filter>
+    <None Include="Lamp.fs">
+      <Filter>Source Files</Filter>
     </None>
-    <None Include="..\Resources\Shaders\Lamp.VS.glsl">
-      <Filter>Source Files\Shaders</Filter>
+    <None Include="Lamp.vs">
+      <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
 </Project>

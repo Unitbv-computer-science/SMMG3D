@@ -48,6 +48,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab8 - Load Model", "Lab8 -
 		{DB29B095-5AE6-4EEA-9793-356559744621} = {DB29B095-5AE6-4EEA-9793-356559744621}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab7 - Iluminare Phong simpla", "Lab7 - Iluminare Phong simpla\Lab7 - Iluminare Phong simpla.vcxproj", "{926A45A0-95FD-4582-850F-D358FCA3062D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -176,6 +178,14 @@ Global
 		{5657B921-2C17-4C74-9609-4130DF104DFA}.Release|x64.Build.0 = Release|x64
 		{5657B921-2C17-4C74-9609-4130DF104DFA}.Release|x86.ActiveCfg = Release|Win32
 		{5657B921-2C17-4C74-9609-4130DF104DFA}.Release|x86.Build.0 = Release|Win32
+		{926A45A0-95FD-4582-850F-D358FCA3062D}.Debug|x64.ActiveCfg = Debug|x64
+		{926A45A0-95FD-4582-850F-D358FCA3062D}.Debug|x64.Build.0 = Debug|x64
+		{926A45A0-95FD-4582-850F-D358FCA3062D}.Debug|x86.ActiveCfg = Debug|Win32
+		{926A45A0-95FD-4582-850F-D358FCA3062D}.Debug|x86.Build.0 = Debug|Win32
+		{926A45A0-95FD-4582-850F-D358FCA3062D}.Release|x64.ActiveCfg = Release|x64
+		{926A45A0-95FD-4582-850F-D358FCA3062D}.Release|x64.Build.0 = Release|x64
+		{926A45A0-95FD-4582-850F-D358FCA3062D}.Release|x86.ActiveCfg = Release|Win32
+		{926A45A0-95FD-4582-850F-D358FCA3062D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
