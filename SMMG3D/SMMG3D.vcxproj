@@ -23,7 +23,7 @@
     <ProjectGuid>{3E1D3E91-3D14-4D54-9F5F-9E39552AF3B0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SMMG3D</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

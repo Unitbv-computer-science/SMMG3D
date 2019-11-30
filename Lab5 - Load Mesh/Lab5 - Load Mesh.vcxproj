@@ -23,7 +23,7 @@
     <ProjectGuid>{67B7224F-F20A-4953-8C66-8E320EF3B735}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Lab5LoadMesh</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ProjectName>Lab5 - Camera movement</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

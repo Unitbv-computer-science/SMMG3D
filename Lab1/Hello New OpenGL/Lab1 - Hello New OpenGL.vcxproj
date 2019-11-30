@@ -23,7 +23,7 @@
     <ProjectGuid>{A517620B-F8BA-41B1-A0CC-90F304622ED4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Lab1HelloNewOpenGL</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ProjectName>Lab1 - Hello New OpenGL</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
